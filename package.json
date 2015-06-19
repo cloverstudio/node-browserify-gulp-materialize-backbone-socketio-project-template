@@ -1,0 +1,47 @@
+{
+  "name": "Spika",
+  "version": "0.0.1",
+  "author": "Clover Studio Ltd",
+  "description": "Spika is opensource messenger microservice",
+  "dependencies": {
+    "JSON2": "latest",
+    "jquery": "latest",
+    "jquery-browserify": "latest",
+    "lodash": "latest",
+    "sockpress": "0.0.5",
+    "materialize-css": "git://github.com/Dogfalo/materialize.git",
+    "backbone": "latest",
+    "handlebars ": "latest",
+    "hbsfy ": "latest"
+  },
+  "devDependencies": {
+    "browserify": "latest",
+    "browserify-shim": "latest",
+    "gulp": "^3.9.0",
+    "gulp-copy": "latest",
+    "gulp-jshint": "latest",
+    "gulp-sass": "latest",
+    "gulp-util": "latest",
+    "vinyl-source-stream": "latest",
+    "watchify": "latest",
+    "gulp-plumber": "latest"
+  },
+  "scripts": {
+    "build-js": "browserify src/client/js/main.js > public/js/bundle.js -d",
+    "watch-js": "watchify src/client/js/main.js -o public/js/bundle.js -v -d "
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "materialize": "./node_modules/materialize-css/bin/materialize.js"
+  },
+  "browserify-shim": {
+    "materialize": {
+      "exports": "materialize"
+    },
+    "three": "global:THREE"
+  }
+}

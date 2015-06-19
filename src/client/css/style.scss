@@ -1,0 +1,29 @@
+// Materialize settings
+@import "../../../node_modules/materialize-css/sass/components/color";
+@import "../../../node_modules/materialize-css/sass/components/variables";
+
+// setup variables
+//$button-color: red;
+
+@import "../../../node_modules/materialize-css/sass/materialize";
+
+@import "login";
+
+// global style settings
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.divider_noborder{
+    height: 1px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.form-error-label{
+    color: $error-color;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
